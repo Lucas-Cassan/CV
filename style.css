@@ -1,0 +1,673 @@
+@font-face {
+    font-family: "SF Pro";
+    src: url("fonts/SF-Pro-Text-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "SF Pro Medium";
+    src: url("fonts/SF-Pro-Text-Medium.otf") format("opentype");
+}
+@font-face {
+    font-family: "SF Pro Bold";
+    src: url("fonts/SF-Pro-Text-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "SF Pro Thin";
+    src: url("fonts/SF-Pro-Text-Thin.otf") format("opentype");
+}
+@font-face {
+    font-family: "SF Pro Light";
+    src: url("fonts/SF-Pro-Text-Light.otf") format("opentype");
+}
+
+html, body{
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+#incompatible{
+    display: none;
+}
+#main{
+    width: 100vw;
+    min-height: 100vh;
+    background-color: #2F3136;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main h1{
+    font-family: "SF Pro", sans-serif;
+    font-size: 2em;
+    color: white;
+}
+#main #phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    height: 598px;
+    width: 300px;
+    overflow: hidden;
+    border-radius: 52px;
+}
+#main .phoneBorder{
+    z-index: 5;
+    height: 600px;
+    width: 300px;
+    position: absolute;
+}
+#main .phoneContenu{
+    height: 600px;
+    width: 300px;
+    position: absolute;
+    z-index: 4;
+
+    color: white;
+    font-family: "SF Pro", sans-serif;
+}
+#main .phoneContenu{
+    height: 520px;
+    width: 240px;
+    padding: 50px 30px 20px 30px;
+    position: absolute;
+    transition: all .5s ease-in-out;
+}
+#main .slideBar, #main .slideBarBack{
+    width: 120px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+}
+#main .info{
+    width: 242px;
+    height: 35px;
+    padding: 12px 25px 0 25px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main #phoneApp .info{
+    width: 242px;
+    height: 35px;
+    padding: 12px 28px 0 28px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main .info .infoLeft, #main .info .infoRight{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 50px;
+}
+#main .info .infoRight img{
+    height: 7px;
+}
+#main .info .infoLeft{
+    font-size: .7em;
+    font-family: "SF Pro Medium", sans-serif;
+}
+#main .BG{
+    height: 590px;
+    width: 290px;
+    display: none;
+    z-index: 1;
+}
+    /*
+    INTERFACE ÉCRAN VÉROUILLER
+    */
+#ClickUnlock{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+#main #phoneLock{
+    z-index: 4;
+    background: url("images/verouillage.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    transition: all .4s ease-in-out;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+#main #slideBar1{
+    position: absolute;
+    bottom: 20px;
+    animation: slideBar 7s infinite ease-in-out;
+    text-align: center;
+}
+#main #slideText{
+    font-family: "SF Pro", sans-serif;
+    position: absolute;
+    bottom: 20px;
+    font-size: 1em;
+    animation: slideBarText 7s infinite ease-in-out;
+}
+@keyframes slideBar{
+    0%  {transform: translateY(0%)}
+    10%  {transform: translateY(0%)}
+    25%  {transform: translateY(-100%)}
+    50%  {transform: translateY(0%)}
+    75%  {transform: translateY(0%)}
+    100%  {transform: translateY(0%)}
+}
+@keyframes slideBarText{
+    0%  {transform: translateY(100%); opacity: 0;}
+    10%  {transform: translateY(0%); opacity: 0;}
+    25%  {transform: translateY(-125%); opacity: 100%;}
+    50%  {transform: translateY(-125%); opacity: 100%;}
+    75%  {transform: translateY(-125%); opacity: 0%;}
+    100%  {transform: translateY(-125%); opacity: 0%;}
+}
+#main #phoneLock h2{
+    font-family: "SF Pro Bold", sans-serif;
+    font-size: 1.6em;
+    margin: 0 0 5px 0;
+}
+#main #phoneLock p{
+    font-size: 1em;
+    margin: 0;
+    font-family: "SF Pro Thin", sans-serif;
+}
+#main #phoneLock #padlock{
+    margin-bottom: 10px;
+    width: 25px;
+}
+
+/*
+INTERFACE HOME
+*/
+
+#main #phoneHome{
+    overflow: hidden;
+    z-index: 2;
+    display: none;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 240px;
+    padding: 50px 25px 20px 25px;
+
+}
+#main #app{
+    transition: all .4s ease-in-out;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 10px;
+    transform: scale(5);
+}
+#main .app{
+    margin: 0;
+    width: 100%;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+#main .widget{
+    margin: 0;
+    width: 100%;
+    transition: all .3s ease-in-out;
+}
+#main .nameApp{
+    margin: 0 0 15px 0;
+    display: flex;
+    justify-content: center;
+}
+#main .appButton{
+    outline: none;
+    margin: 0 8px;
+    width: 44px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-family: "SF Pro", sans-serif;
+    font-size: .6em;
+    text-align: center;
+}
+#main .widgetButton{
+    outline: none;
+    margin: 0 8px;
+    width: 104px;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-family: "SF Pro", sans-serif;
+    font-size: .6em;
+    text-align: center;
+}
+#main #dock{
+    transition: all .4s ease-in-out;
+    transform: translateY(150%);
+    display: flex;
+    width: 243px;
+    height: 60px;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 23px;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+INTERFACE APP
+*/
+#main #phoneAppBG{
+    overflow: hidden;
+    z-index: 6;
+    display: flex;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    background-color: #F1F0F5;
+    transition: all .3s ease-in-out;
+    border-radius: 50px;
+}
+#main #phoneApp{
+    overflow: hidden;
+    z-index: 11;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    transition: all .3s ease-in-out;
+    border-radius: 50px;
+}
+#main #phoneAppBG.open{
+    width: 290px;
+    height: 590px;
+}
+#main #phoneApp.open{
+    width: 259px;
+    height: 520px;
+    padding: 50px 20px 20px 21px;
+}
+#main #phoneApp .info{
+    color: black;
+}
+#main .slideBarBack{
+    animation: slideBarBack 5s infinite ease-in-out;
+    cursor: pointer;
+    z-index: 10;
+}
+
+@keyframes slideBarBack{
+    0%  {transform: translateY(0%)}
+    25%  {transform: translateY(0%)}
+    50%  {transform: translateY(-50%)}
+    75%  {transform: translateY(0%)}
+    100%  {transform: translateY(0%)}
+}
+#main .interfaceApp{
+    display: none;
+    width: 100%;
+    padding: 0;
+    min-height: 50%;
+    max-height: 95%;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#main .interfaceApp h3{
+    font-family: 'SF Pro Bold', sans-serif;
+    font-size: 1.5em;
+    margin: 10% 0 0 5%;
+    color: black;
+}
+#main .interfaceApp h4{
+    font-family: 'SF Pro', sans-serif;
+    font-size: 1em;
+    margin: 0 0 0 5%;
+    color: black;
+}
+#main #AppReglages .reglageBarre{
+    color: black;
+    background-color: white;
+    width: 90%;
+    height: 31px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+}
+#main #reglageMaj{
+    color: black;
+    background-color: white;
+    width: 90%;
+    height: 31px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    font-family: 'SF Pro Medium', sans-serif;
+    font-size: .7em;
+    justify-content: space-between;
+    margin: 0;
+}
+#main #reglageProfil{
+    color: black;
+    background-color: white;
+    width: 90%;
+    height: 65px;
+    padding: 0 5%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+#main #reglageProfil img{
+    border-radius: 100%;
+    height: 80%;
+    margin-right: 5%;
+}
+#main #reglageProfil h4{
+    font-family: 'SF Pro Medium', sans-serif;
+    font-size: 1em;
+    margin: 0;
+}
+#main #reglageProfil p{
+    font-family: 'SF Pro Light', sans-serif;
+    font-size: .8em;
+    margin: 0;
+}
+#main #AppReglages .icon{
+    height: 24px;
+    border-radius: 20%;
+}
+#main #AppReglages .fleche, #main #AppReglages .flecheAnime{
+    height: 10px;
+}
+#main #AppReglages .flecheAnime{
+    animation: flecheAnime 2s infinite ease-in-out;
+}
+@keyframes flecheAnime{
+    0%  {transform: translateX(0%)}
+    50%  {transform: translateX(-50%)}
+    100%  {transform: translateX(0%)}
+}
+#main #AppReglages .button{
+    height: 22px;
+}
+#main .space{
+    width: 100%;
+    height: 20px;
+}
+#main #AppReglages .reglageBarre p{
+    font-family: 'SF Pro Medium', sans-serif;
+    font-size: .8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0 5%;
+    height: 100%;
+    width: 100%;
+   /* border-bottom: #F1F0F5 1px solid;
+    border-top: #F1F0F5 1px solid;*/
+}
+
+#main #AppCompetences .competencesBarre, #main #AppCompetences .competencesBarrePlus{
+    background-color: white;
+    width: 80%;
+    height: 50px;
+    margin: 5px 5%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px 5%;
+}
+#main #AppCompetences .competencesBarrePlus{
+    height: 115px;
+}
+#main #AppCompetences .competecesTitles{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main #AppCompetences .competecesTitles p{
+    color: #E94D1F;
+    font-size: .8em;
+    font-family: 'SF Pro Medium', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+#main #AppCompetences .flamme{
+    height: 13px;
+    margin-right: 5px;
+}
+#main #AppCompetences .fleche{
+    height: 10px;
+}
+#main #AppCompetences .smallStats{
+    width: 100%;
+    display: flex;
+}
+#main #AppCompetences .smallStats h5{
+    font-size: 1em;
+    color: black;
+    margin: 0;
+    display: flex;
+    align-items: flex-end;
+}
+#main #AppCompetences .smallStats p{
+    color: #C4C3C5;
+    font-size: .8em;
+    margin: 0 0 1px 5px;
+    display: flex;
+    align-items: flex-end;
+}
+#main #Stats{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+}
+#main #Stats h6{
+    margin: 0;
+    font-size: 1em;
+    font-family: "SF Pro Bold", sans-serif;
+    color: black;
+}
+#main #Stats #statsGauche, #main #Stats #statsDroite{
+    border-right: 1px solid #C4C3C5;
+}
+#main #Stats #statsGauche{
+    padding-right: 20px;
+}
+#main #Stats #statsDroite{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+#main #Stats #statsGauche p{
+    margin: 0 0 5px 0;
+    font-size: .7em;
+    font-family: "SF Pro Bold", sans-serif;
+    color: #E2061C;
+    width: auto;
+}
+#main #Stats #statsDroite p{
+    margin: 0 0 5px 0;
+    font-size: .7em;
+    font-family: "SF Pro Bold", sans-serif;
+    color: #5CB030;
+    width: auto;
+}
+#main #languages{
+    width: 100%;
+    height: 30%;
+}
+#main #languages p{
+    margin: 0 0 5px 0;
+    width: 100%;
+    font-size: .7em;
+    color: #15B8DC;
+    font-family: "SF Pro Bold", sans-serif;
+}
+
+#main #languages img{
+    height: 15px;
+    margin: 0 5px 0 0;
+}
+#main #AppFormation .formationContenu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+#main #AppFormation .formationContenu .ecole{
+    margin-bottom: 40px;
+    margin-top: 10px;
+    height: 45px;
+}
+#main #AppFormation .memoji{
+    position: relative;
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#main #AppFormation .memoji .memojiIcon{
+    width: 100%;
+    height: 160px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#main #AppFormation .memoji .memojiIcon p{
+    font-family: "SF Pro Bold", sans-serif;
+    font-size: 1em;
+    color: black;
+    margin: 10px 0 0 0;
+}
+#main #AppFormation .memoji img{
+    width: 140px;
+}
+#main #AppFormation #memojiAudio, #main #AppFormation #memojiGraphisme{
+    display: none;
+}
+#main #AppFormation .memojiScroll{
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main #AppFormation .memojiScroll img{
+    width: 20px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+#main #AppFormation .memojiScroll img.droite{
+    transform: rotateX(0deg);
+}
+#main #AppFormation .memojiScroll img.gauche{
+    transform: rotateY(180deg);
+}
+#main #AppFormation .ecoleInfo{
+    width: 90%;
+    color: black;
+}
+#main #AppFormation .ecoleInfo h4{
+    margin: 0;
+    font-size: 1em;
+    font-family: "SF Pro Bold", sans-serif;
+}
+#main #AppFormation .ecoleInfo h5{
+    margin: 0;
+    font-size: .8em;
+    font-family: "SF Pro Bold", sans-serif;
+}
+#main #AppFormation .ecoleInfo p{
+    margin: 0 0 10px 0;
+    font-size: .7em;
+    font-family: "SF Pro Medium", sans-serif;
+}
+#main #AppFormation .memojiScroll #scrollDev, #main #AppFormation .memojiScroll #scrollGraphisme{
+    display: none;
+}
+#main #AppExperiences{
+}
+#main #AppExperiences .experiencesContenu{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    color: black;
+}
+#main #AppExperiences .experiencesContenu h3{
+    font-size: 1em;
+    font-family: "SF Pro Bold", sans-serif;
+    margin: 0 0 20px 0;
+}
+#main #AppExperiences .experiencesContenu img.logo{
+    width: 60%;
+    margin: 20px 0;
+}
+#main #AppExperiences .experiencesContenu .experiencesInfo{
+    width: 90%;
+    padding: 20px 0;
+    border-top: 1px solid #C4C3C5;
+    height: 100px;
+    overflow-y: scroll;
+}
+#main #AppExperiences .experiencesContenu .experiencesInfo h5{
+    margin: 0 0 5px 0;
+    font-size: .8em;
+    font-family: "SF Pro Bold", sans-serif;
+}
+#main #AppExperiences .experiencesContenu .experiencesInfo p{
+    margin: 0 0 10px 0;
+    font-size: .7em;
+    font-family: "SF Pro Medium", sans-serif;
+}
+#main #AppExperiences .experiencesViews{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#main #AppExperiences .experiencesViews .view{
+    min-width: 50%;
+    color: white;
+    background-color: #59B14B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "SF Pro Bold", sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+    margin-top: 10px;
+    padding: 5px 10px;
+    border-radius: 10px;
+}

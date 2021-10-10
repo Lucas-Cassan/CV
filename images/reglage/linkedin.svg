@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Musique" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#0766C1;}
+	.st1{fill:#FFFFFF;}
+</style>
+<path class="st0" d="M39.7,0H10.3C4.6,0,0,4.6,0,10.3v29.5C0,45.4,4.6,50,10.3,50h29.5C45.4,50,50,45.4,50,39.7V10.3
+	C50,4.6,45.4,0,39.7,0z"/>
+<image style="overflow:visible;" width="787" height="571" xlink:href="IMG_2475.jpg"  transform="matrix(0.1368 0 0 0.1368 71.7616 -20.5568)">
+</image>
+<g>
+	<rect x="8.7" y="18.1" class="st1" width="6.6" height="24.3"/>
+	<ellipse class="st1" cx="12" cy="11.4" rx="3.9" ry="3.9"/>
+	<path class="st1" d="M41.9,42.5h-6.6V30.1c0-7.4-8.8-6.9-8.8,0v12.4h-6.6V18.1h6.6V22c3.1-5.7,15.5-6.1,15.5,5.5V42.5z"/>
+</g>
+</svg>
