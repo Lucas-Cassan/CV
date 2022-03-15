@@ -2,9 +2,9 @@
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://fr.wikipedia.org/wiki/JavaScript)      [![forthebadge](https://forthebadge.com/images/badges/fixed-bugs.svg)]()
 
-Création de mon CV web avec une interface mobile en **HTML**, **CSS** et **JS**
+Création de mon CV web sur une interface mobile.
 
-## Fabriqué avec
+## Langages utilisés
 
 * [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML) - Structure.
 * [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) - Style graphique.
