@@ -2,48 +2,58 @@
     font-family: "SF Pro";
     src: url("fonts/SF-Pro-Text-Regular.otf") format("opentype");
 }
+
 @font-face {
     font-family: "SF Pro Medium";
     src: url("fonts/SF-Pro-Text-Medium.otf") format("opentype");
 }
+
 @font-face {
     font-family: "SF Pro Bold";
     src: url("fonts/SF-Pro-Text-Bold.otf") format("opentype");
 }
+
 @font-face {
     font-family: "SF Pro Thin";
     src: url("fonts/SF-Pro-Text-Thin.otf") format("opentype");
 }
+
 @font-face {
     font-family: "SF Pro Light";
     src: url("fonts/SF-Pro-Text-Light.otf") format("opentype");
 }
 
-html, body{
+html,
+body {
     padding: 0;
     margin: 0;
 }
-a{
+
+a {
     text-decoration: none;
 }
-#incompatible{
+
+#incompatible {
     display: none;
 }
-#main{
+
+#main {
     width: 100vw;
     min-height: 100vh;
-    background-color: #2F3136;
+    background-color: #3e3e3e;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
-#main h1{
+
+#main h1 {
     font-family: "SF Pro", sans-serif;
     font-size: 2em;
     color: white;
 }
-#main #phone{
+
+#main #phone {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,13 +64,15 @@ a{
     overflow: hidden;
     border-radius: 52px;
 }
-#main .phoneBorder{
+
+#main .phoneBorder {
     z-index: 5;
     height: 600px;
     width: 300px;
     position: absolute;
 }
-#main .phoneContenu{
+
+#main .phoneContenu {
     height: 600px;
     width: 300px;
     position: absolute;
@@ -69,20 +81,35 @@ a{
     color: white;
     font-family: "SF Pro", sans-serif;
 }
-#main .phoneContenu{
+
+#main .phoneContenu {
     height: 520px;
     width: 240px;
     padding: 50px 30px 20px 30px;
     position: absolute;
     transition: all .5s ease-in-out;
 }
-#main .slideBar, #main .slideBarBack{
+
+#main .slideBar,
+#main .slideBarBack {
     width: 120px;
     cursor: pointer;
     position: absolute;
     bottom: 20px;
 }
-#main .info{
+
+#main #date {
+    bottom: 5px;
+    position: absolute;
+    font-size: 1.2em;
+    color: #ffb400;
+    z-index: 9;
+    font-family: "SF Pro", sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#main .info {
     width: 242px;
     height: 35px;
     padding: 12px 25px 0 25px;
@@ -93,7 +120,8 @@ a{
     justify-content: space-between;
     align-items: center;
 }
-#main #phoneApp .info{
+
+#main #phoneApp .info {
     width: 242px;
     height: 35px;
     padding: 12px 28px 0 28px;
@@ -104,29 +132,35 @@ a{
     justify-content: space-between;
     align-items: center;
 }
-#main .info .infoLeft, #main .info .infoRight{
+
+#main .info .infoLeft,
+#main .info .infoRight {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 50px;
 }
-#main .info .infoRight img{
+
+#main .info .infoRight img {
     height: 7px;
 }
-#main .info .infoLeft{
+
+#main .info .infoLeft {
     font-size: .7em;
     font-family: "SF Pro Medium", sans-serif;
 }
-#main .BG{
+
+#main .BG {
     height: 590px;
     width: 290px;
     display: none;
     z-index: 1;
 }
-    /*
+
+/*
     INTERFACE ÉCRAN VÉROUILLER
     */
-#ClickUnlock{
+#ClickUnlock {
     position: fixed;
     width: 100vw;
     height: 100vh;
@@ -134,7 +168,8 @@ a{
     left: 0;
     z-index: 999;
 }
-#main #phoneLock{
+
+#main #phoneLock {
     z-index: 4;
     background: url("images/verouillage.jpg");
     background-size: contain;
@@ -146,46 +181,93 @@ a{
     align-items: center;
     flex-direction: column;
 }
-#main #slideBar1{
+
+#main #slideBar1 {
     position: absolute;
     bottom: 20px;
     animation: slideBar 7s infinite ease-in-out;
     text-align: center;
 }
-#main #slideText{
+
+#main #slideText {
     font-family: "SF Pro", sans-serif;
     position: absolute;
     bottom: 20px;
     font-size: 1em;
     animation: slideBarText 7s infinite ease-in-out;
 }
-@keyframes slideBar{
-    0%  {transform: translateY(0%)}
-    10%  {transform: translateY(0%)}
-    25%  {transform: translateY(-100%)}
-    50%  {transform: translateY(0%)}
-    75%  {transform: translateY(0%)}
-    100%  {transform: translateY(0%)}
+
+@keyframes slideBar {
+    0% {
+        transform: translateY(0%)
+    }
+
+    10% {
+        transform: translateY(0%)
+    }
+
+    25% {
+        transform: translateY(-100%)
+    }
+
+    50% {
+        transform: translateY(0%)
+    }
+
+    75% {
+        transform: translateY(0%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
 }
-@keyframes slideBarText{
-    0%  {transform: translateY(100%); opacity: 0;}
-    10%  {transform: translateY(0%); opacity: 0;}
-    25%  {transform: translateY(-125%); opacity: 100%;}
-    50%  {transform: translateY(-125%); opacity: 100%;}
-    75%  {transform: translateY(-125%); opacity: 0%;}
-    100%  {transform: translateY(-125%); opacity: 0%;}
+
+@keyframes slideBarText {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+
+    10% {
+        transform: translateY(0%);
+        opacity: 0;
+    }
+
+    25% {
+        transform: translateY(-125%);
+        opacity: 100%;
+    }
+
+    50% {
+        transform: translateY(-125%);
+        opacity: 100%;
+    }
+
+    75% {
+        transform: translateY(-125%);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(-125%);
+        opacity: 0%;
+    }
 }
-#main #phoneLock h2{
+
+#main #phoneLock h2 {
     font-family: "SF Pro Bold", sans-serif;
     font-size: 1.6em;
     margin: 0 0 5px 0;
 }
-#main #phoneLock p{
+
+#main #phoneLock p {
     font-size: 1em;
     margin: 0;
     font-family: "SF Pro Thin", sans-serif;
 }
-#main #phoneLock #padlock{
+
+#main #phoneLock #padlock {
     margin-bottom: 10px;
     width: 25px;
 }
@@ -194,7 +276,7 @@ a{
 INTERFACE HOME
 */
 
-#main #phoneHome{
+#main #phoneHome {
     overflow: hidden;
     z-index: 2;
     display: none;
@@ -205,7 +287,8 @@ INTERFACE HOME
     padding: 50px 25px 20px 25px;
 
 }
-#main #app{
+
+#main #app {
     transition: all .4s ease-in-out;
     display: flex;
     flex-wrap: wrap;
@@ -213,23 +296,27 @@ INTERFACE HOME
     margin-top: 10px;
     transform: scale(5);
 }
-#main .app{
+
+#main .app {
     margin: 0;
     width: 100%;
     transition: all .3s ease-in-out;
     cursor: pointer;
 }
-#main .widget{
+
+#main .widget {
     margin: 0;
     width: 100%;
     transition: all .3s ease-in-out;
 }
-#main .nameApp{
+
+#main .nameApp {
     margin: 0 0 15px 0;
     display: flex;
     justify-content: center;
 }
-#main .appButton{
+
+#main .appButton {
     outline: none;
     margin: 0 8px;
     width: 44px;
@@ -241,7 +328,8 @@ INTERFACE HOME
     font-size: .6em;
     text-align: center;
 }
-#main .widgetButton{
+
+#main .widgetButton {
     outline: none;
     margin: 0 8px;
     width: 104px;
@@ -253,7 +341,8 @@ INTERFACE HOME
     font-size: .6em;
     text-align: center;
 }
-#main #dock{
+
+#main #dock {
     transition: all .4s ease-in-out;
     transform: translateY(150%);
     display: flex;
@@ -270,7 +359,7 @@ INTERFACE HOME
 /*
 INTERFACE APP
 */
-#main #phoneAppBG{
+#main #phoneAppBG {
     overflow: hidden;
     z-index: 6;
     display: flex;
@@ -281,7 +370,8 @@ INTERFACE APP
     transition: all .3s ease-in-out;
     border-radius: 50px;
 }
-#main #phoneApp{
+
+#main #phoneApp {
     overflow: hidden;
     z-index: 11;
     display: flex;
@@ -294,32 +384,51 @@ INTERFACE APP
     transition: all .3s ease-in-out;
     border-radius: 50px;
 }
-#main #phoneAppBG.open{
+
+#main #phoneAppBG.open {
     width: 290px;
     height: 590px;
 }
-#main #phoneApp.open{
+
+#main #phoneApp.open {
     width: 259px;
     height: 520px;
     padding: 50px 20px 20px 21px;
 }
-#main #phoneApp .info{
+
+#main #phoneApp .info {
     color: black;
 }
-#main .slideBarBack{
+
+#main .slideBarBack {
     animation: slideBarBack 5s infinite ease-in-out;
     cursor: pointer;
     z-index: 10;
 }
 
-@keyframes slideBarBack{
-    0%  {transform: translateY(0%)}
-    25%  {transform: translateY(0%)}
-    50%  {transform: translateY(-50%)}
-    75%  {transform: translateY(0%)}
-    100%  {transform: translateY(0%)}
+@keyframes slideBarBack {
+    0% {
+        transform: translateY(0%)
+    }
+
+    25% {
+        transform: translateY(0%)
+    }
+
+    50% {
+        transform: translateY(-50%)
+    }
+
+    75% {
+        transform: translateY(0%)
+    }
+
+    100% {
+        transform: translateY(0%)
+    }
 }
-#main .interfaceApp{
+
+#main .interfaceApp {
     display: none;
     width: 100%;
     padding: 0;
@@ -329,19 +438,22 @@ INTERFACE APP
     align-items: flex-start;
     justify-content: flex-start;
 }
-#main .interfaceApp h3{
+
+#main .interfaceApp h3 {
     font-family: 'SF Pro Bold', sans-serif;
     font-size: 1.5em;
     margin: 10% 0 0 5%;
     color: black;
 }
-#main .interfaceApp h4{
+
+#main .interfaceApp h4 {
     font-family: 'SF Pro', sans-serif;
     font-size: 1em;
     margin: 0 0 0 5%;
     color: black;
 }
-#main #AppReglages .reglageBarre{
+
+#main #AppReglages .reglageBarre {
     color: black;
     background-color: white;
     width: 90%;
@@ -350,7 +462,8 @@ INTERFACE APP
     display: flex;
     align-items: center;
 }
-#main #reglageMaj{
+
+#main #reglageMaj {
     color: black;
     background-color: white;
     width: 90%;
@@ -363,7 +476,8 @@ INTERFACE APP
     justify-content: space-between;
     margin: 0;
 }
-#main #reglageProfil{
+
+#main #reglageProfil {
     color: black;
     background-color: white;
     width: 90%;
@@ -373,44 +487,63 @@ INTERFACE APP
     align-items: center;
     margin: 0;
 }
-#main #reglageProfil img{
+
+#main #reglageProfil img {
     border-radius: 100%;
     height: 80%;
     margin-right: 5%;
 }
-#main #reglageProfil h4{
+
+#main #reglageProfil h4 {
     font-family: 'SF Pro Medium', sans-serif;
     font-size: 1em;
     margin: 0;
 }
-#main #reglageProfil p{
+
+#main #reglageProfil p {
     font-family: 'SF Pro Light', sans-serif;
     font-size: .8em;
     margin: 0;
 }
-#main #AppReglages .icon{
+
+#main #AppReglages .icon {
     height: 24px;
     border-radius: 20%;
 }
-#main #AppReglages .fleche, #main #AppReglages .flecheAnime{
+
+#main #AppReglages .fleche,
+#main #AppReglages .flecheAnime {
     height: 10px;
 }
-#main #AppReglages .flecheAnime{
+
+#main #AppReglages .flecheAnime {
     animation: flecheAnime 2s infinite ease-in-out;
 }
-@keyframes flecheAnime{
-    0%  {transform: translateX(0%)}
-    50%  {transform: translateX(-50%)}
-    100%  {transform: translateX(0%)}
+
+@keyframes flecheAnime {
+    0% {
+        transform: translateX(0%)
+    }
+
+    50% {
+        transform: translateX(-50%)
+    }
+
+    100% {
+        transform: translateX(0%)
+    }
 }
-#main #AppReglages .button{
+
+#main #AppReglages .button {
     height: 22px;
 }
-#main .space{
+
+#main .space {
     width: 100%;
     height: 20px;
 }
-#main #AppReglages .reglageBarre p{
+
+#main #AppReglages .reglageBarre p {
     font-family: 'SF Pro Medium', sans-serif;
     font-size: .8em;
     display: flex;
@@ -419,11 +552,12 @@ INTERFACE APP
     margin: 0 0 0 5%;
     height: 100%;
     width: 100%;
-   /* border-bottom: #F1F0F5 1px solid;
+    /* border-bottom: #F1F0F5 1px solid;
     border-top: #F1F0F5 1px solid;*/
 }
 
-#main #AppCompetences .competencesBarre, #main #AppCompetences .competencesBarrePlus{
+#main #AppCompetences .competencesBarre,
+#main #AppCompetences .competencesBarrePlus {
     background-color: white;
     width: 80%;
     height: 50px;
@@ -434,17 +568,20 @@ INTERFACE APP
     justify-content: space-between;
     padding: 5px 5%;
 }
-#main #AppCompetences .competencesBarrePlus{
+
+#main #AppCompetences .competencesBarrePlus {
     height: 115px;
 }
-#main #AppCompetences .competecesTitles{
+
+#main #AppCompetences .competecesTitles {
     width: 100%;
     height: 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-#main #AppCompetences .competecesTitles p{
+
+#main #AppCompetences .competecesTitles p {
     color: #E94D1F;
     font-size: .8em;
     font-family: 'SF Pro Medium', sans-serif;
@@ -452,72 +589,87 @@ INTERFACE APP
     display: flex;
     align-items: center;
 }
-#main #AppCompetences .flamme{
+
+#main #AppCompetences .flamme {
     height: 13px;
     margin-right: 5px;
 }
-#main #AppCompetences .fleche{
+
+#main #AppCompetences .fleche {
     height: 10px;
 }
-#main #AppCompetences .smallStats{
+
+#main #AppCompetences .smallStats {
     width: 100%;
     display: flex;
 }
-#main #AppCompetences .smallStats h5{
+
+#main #AppCompetences .smallStats h5 {
     font-size: 1em;
     color: black;
     margin: 0;
     display: flex;
     align-items: flex-end;
 }
-#main #AppCompetences .smallStats p{
+
+#main #AppCompetences .smallStats p {
     color: #C4C3C5;
     font-size: .8em;
     margin: 0 0 1px 5px;
     display: flex;
     align-items: flex-end;
 }
-#main #Stats{
+
+#main #Stats {
     width: 100%;
     height: 30%;
     display: flex;
     align-items: center;
 }
-#main #Stats h6{
+
+#main #Stats h6 {
     margin: 0;
     font-size: 1em;
     font-family: "SF Pro Bold", sans-serif;
     color: black;
 }
-#main #Stats #statsGauche, #main #Stats #statsDroite{
+
+#main #Stats #statsGauche,
+#main #Stats #statsDroite {
     border-right: 1px solid #C4C3C5;
 }
-#main #Stats #statsGauche{
+
+#main #Stats #statsGauche {
     padding-right: 20px;
 }
-#main #Stats #statsDroite{
+
+#main #Stats #statsDroite {
     padding-right: 10px;
     padding-left: 10px;
 }
-#main #Stats #statsGauche p{
+
+#main #Stats #statsGauche p {
     margin: 0 0 5px 0;
     font-size: .7em;
     font-family: "SF Pro Bold", sans-serif;
     color: #E2061C;
     width: auto;
 }
-#main #Stats #statsDroite p{
+
+#main #Stats #statsDroite p {
     margin: 0 0 5px 0;
     font-size: .7em;
     font-family: "SF Pro Bold", sans-serif;
     color: #5CB030;
     width: auto;
 }
-#main #languages{
+
+#main #languages {
     width: 100%;
     height: 30%;
 }
-#main #languages p{
+
+#main #languages p {
     margin: 0 0 5px 0;
     width: 100%;
     font-size: .7em;
@@ -525,23 +677,26 @@ INTERFACE APP
     font-family: "SF Pro Bold", sans-serif;
 }
 
-#main #languages img{
+#main #languages img {
     height: 15px;
     margin: 0 5px 0 0;
 }
-#main #AppFormation .formationContenu{
+
+#main #AppFormation .formationContenu {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
 }
-#main #AppFormation .formationContenu .ecole{
+
+#main #AppFormation .formationContenu .ecole {
     margin-bottom: 40px;
     margin-top: 10px;
     height: 45px;
 }
-#main #AppFormation .memoji{
+
+#main #AppFormation .memoji {
     position: relative;
     width: 100%;
     height: 210px;
@@ -550,7 +705,8 @@ INTERFACE APP
     align-items: center;
     justify-content: center;
 }
-#main #AppFormation .memoji .memojiIcon{
+
+#main #AppFormation .memoji .memojiIcon {
     width: 100%;
     height: 160px;
     position: absolute;
@@ -560,19 +716,24 @@ INTERFACE APP
     align-items: center;
     flex-direction: column;
 }
-#main #AppFormation .memoji .memojiIcon p{
+
+#main #AppFormation .memoji .memojiIcon p {
     font-family: "SF Pro Bold", sans-serif;
     font-size: 1em;
     color: black;
     margin: 10px 0 0 0;
 }
-#main #AppFormation .memoji img{
+
+#main #AppFormation .memoji img {
     width: 140px;
 }
-#main #AppFormation #memojiAudio, #main #AppFormation #memojiGraphisme{
+
+#main #AppFormation #memojiAudio,
+#main #AppFormation #memojiGraphisme {
     display: none;
 }
-#main #AppFormation .memojiScroll{
+
+#main #AppFormation .memojiScroll {
     position: absolute;
     bottom: 0;
     height: 50px;
@@ -581,42 +742,52 @@ INTERFACE APP
     justify-content: center;
     align-items: center;
 }
-#main #AppFormation .memojiScroll img{
+
+#main #AppFormation .memojiScroll img {
     width: 20px;
     cursor: pointer;
     margin: 0 5px;
 }
-#main #AppFormation .memojiScroll img.droite{
+
+#main #AppFormation .memojiScroll img.droite {
     transform: rotateX(0deg);
 }
-#main #AppFormation .memojiScroll img.gauche{
+
+#main #AppFormation .memojiScroll img.gauche {
     transform: rotateY(180deg);
 }
-#main #AppFormation .ecoleInfo{
+
+#main #AppFormation .ecoleInfo {
     width: 90%;
     color: black;
 }
-#main #AppFormation .ecoleInfo h4{
+
+#main #AppFormation .ecoleInfo h4 {
     margin: 0;
     font-size: 1em;
     font-family: "SF Pro Bold", sans-serif;
 }
-#main #AppFormation .ecoleInfo h5{
+
+#main #AppFormation .ecoleInfo h5 {
     margin: 0;
     font-size: .8em;
     font-family: "SF Pro Bold", sans-serif;
 }
-#main #AppFormation .ecoleInfo p{
+
+#main #AppFormation .ecoleInfo p {
     margin: 0 0 10px 0;
     font-size: .7em;
     font-family: "SF Pro Medium", sans-serif;
 }
-#main #AppFormation .memojiScroll #scrollDev, #main #AppFormation .memojiScroll #scrollGraphisme{
+
+#main #AppFormation .memojiScroll #scrollDev,
+#main #AppFormation .memojiScroll #scrollGraphisme {
     display: none;
 }
-#main #AppExperiences{
-}
-#main #AppExperiences .experiencesContenu{
+
+#main #AppExperiences {}
+
+#main #AppExperiences .experiencesContenu {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -624,39 +795,46 @@ INTERFACE APP
     align-items: center;
     color: black;
 }
-#main #AppExperiences .experiencesContenu h3{
+
+#main #AppExperiences .experiencesContenu h3 {
     font-size: 1em;
     font-family: "SF Pro Bold", sans-serif;
     margin: 0 0 20px 0;
 }
-#main #AppExperiences .experiencesContenu img.logo{
+
+#main #AppExperiences .experiencesContenu img.logo {
     width: 60%;
     margin: 20px 0;
 }
-#main #AppExperiences .experiencesContenu .experiencesInfo{
+
+#main #AppExperiences .experiencesContenu .experiencesInfo {
     width: 90%;
     padding: 20px 0;
     border-top: 1px solid #C4C3C5;
     height: 100px;
     overflow-y: scroll;
 }
-#main #AppExperiences .experiencesContenu .experiencesInfo h5{
+
+#main #AppExperiences .experiencesContenu .experiencesInfo h5 {
     margin: 0 0 5px 0;
     font-size: .8em;
     font-family: "SF Pro Bold", sans-serif;
 }
-#main #AppExperiences .experiencesContenu .experiencesInfo p{
+
+#main #AppExperiences .experiencesContenu .experiencesInfo p {
     margin: 0 0 10px 0;
     font-size: .7em;
     font-family: "SF Pro Medium", sans-serif;
 }
-#main #AppExperiences .experiencesViews{
+
+#main #AppExperiences .experiencesViews {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-#main #AppExperiences .experiencesViews .view{
+
+#main #AppExperiences .experiencesViews .view {
     min-width: 50%;
     color: white;
     background-color: #59B14B;
